@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>王道数据结构与算法实现</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="title">王道数据结构与算法实现</h1>
+            <p class="subtitle">基于王道考研《数据结构与算法》笔记的完整代码实现</p>
+        </div>
+    </header>
+
+    <nav class="nav">
+        <div class="container">
+            <a href="#overview" class="nav-link">概述</a>
+            <a href="#chapters" class="nav-link">章节</a>
+            <a href="#features" class="nav-link">特点</a>
+            <a href="https://github.com/Swcmb/wangdao-data-structures-exercises" class="nav-link" target="_blank">GitHub</a>
+        </div>
+    </nav>
+
+    <main class="main">
+        <section id="overview" class="section">
+            <div class="container">
+                <h2 class="section-title">项目简介</h2>
+                <p class="text">
+                    本项目基于王道考研《数据结构与算法》笔记，实现了书中所有章节的 C 语言代码。
+                    项目涵盖了从基础线性表到高级排序算法的完整实现，旨在为学习数据结构与算法的同学提供清晰、易懂的参考代码。
+                </p>
+            </div>
+        </section>
+
+        <section id="chapters" class="section section-alt">
+            <div class="container">
+                <h2 class="section-title">章节内容</h2>
+                <div class="chapters-grid">
+                    <div class="chapter-card" data-chapter="2">
+                        <div class="chapter-number">02</div>
+                        <h3 class="chapter-title">线性表</h3>
+                        <ul class="chapter-list">
+                            <li>顺序表（静态/动态分配）</li>
+                            <li>单链表（带头结点/不带头结点）</li>
+                            <li>双链表</li>
+                            <li>循环链表</li>
+                            <li>静态链表</li>
+                        </ul>
+                        <div class="chapter-files">
+                            <span class="file-badge">seq_list_static.c</span>
+                            <span class="file-badge">single_linked_list.c</span>
+                            <span class="file-badge">double_linked_list.c</span>
+                        </div>
+                    </div>
+
+                    <div class="chapter-card" data-chapter="3">
+                        <div class="chapter-number">03</div>
+                        <h3 class="chapter-title">栈和队列</h3>
+                        <ul class="chapter-list">
+                            <li>顺序栈、链式栈</li>
+                            <li>循环队列、链式队列</li>
+                            <li>双端队列</li>
+                            <li>栈的应用（括号匹配）</li>
+                        </ul>
+                        <div class="chapter-files">
+                            <span class="file-badge">seq_stack.c</span>
+                            <span class="file-badge">link_queue.c</span>
+                            <span class="file-badge">deque_and_applications.c</span>
+                        </div>
+                    </div>
+
+                    <div class="chapter-card" data-chapter="4">
+                        <div class="chapter-number">04</div>
+                        <h3 class="chapter-title">串</h3>
+                        <ul class="chapter-list">
+                            <li>串的存储结构</li>
+                            <li>朴素模式匹配</li>
+                            <li>KMP 算法（next/nextval 数组）</li>
+                        </ul>
+                        <div class="chapter-files">
+                            <span class="file-badge">string_operations.c</span>
+                        </div>
+                    </div>
+
+                    <div class="chapter-card" data-chapter="5">
+                        <div class="chapter-number">05</div>
+                        <h3 class="chapter-title">树</h3>
+                        <ul class="chapter-list">
+                            <li>二叉树（链式存储）</li>
+                            <li>遍历算法（先序/中序/后序/层序）</li>
+                            <li>线索二叉树</li>
+                            <li>二叉排序树（BST）</li>
+                            <li>平衡二叉树（AVL）</li>
+                            <li>哈夫曼树</li>
+                        </ul>
+                        <div class="chapter-files">
+                            <span class="file-badge">tree_operations.c</span>
+                        </div>
+                    </div>
+
+                    <div class="chapter-card" data-chapter="6">
+                        <div class="chapter-number">06</div>
+                        <h3 class="chapter-title">图</h3>
+                        <ul class="chapter-list">
+                            <li>邻接矩阵、邻接表</li>
+                            <li>深度优先遍历（DFS）</li>
+                            <li>广度优先遍历（BFS）</li>
+                            <li>最小生成树（Prim/Kruskal）</li>
+                            <li>最短路径（Dijkstra/Floyd）</li>
+                            <li>拓扑排序、关键路径</li>
+                        </ul>
+                        <div class="chapter-files">
+                            <span class="file-badge">graph_operations.c</span>
+                        </div>
+                    </div>
+
+                    <div class="chapter-card" data-chapter="7">
+                        <div class="chapter-number">07</div>
+                        <h3 class="chapter-title">查找</h3>
+                        <ul class="chapter-list">
+                            <li>顺序查找、折半查找</li>
+                            <li>分块查找</li>
+                            <li>红黑树</li>
+                            <li>B 树</li>
+                            <li>散列查找</li>
+                        </ul>
+                        <div class="chapter-files">
+                            <span class="file-badge">search_operations.c</span>
+                        </div>
+                    </div>
+
+                    <div class="chapter-card" data-chapter="8">
+                        <div class="chapter-number">08</div>
+                        <h3 class="chapter-title">排序</h3>
+                        <ul class="chapter-list">
+                            <li>插入排序（直接/折半/希尔）</li>
+                            <li>交换排序（冒泡/快速）</li>
+                            <li>选择排序（简单选择/堆排序）</li>
+                            <li>归并排序</li>
+                            <li>基数排序（桶排序）</li>
+                        </ul>
+                        <div class="chapter-files">
+                            <span class="file-badge">sort_operations.c</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="section">
+            <div class="container">
+                <h2 class="section-title">项目特点</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">✓</div>
+                        <h3 class="feature-title">完整覆盖</h3>
+                        <p class="feature-desc">实现了王道考研数据结构与算法书中的所有核心内容</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">✓</div>
+                        <h3 class="feature-title">代码清晰</h3>
+                        <p class="feature-desc">采用简洁明了的代码风格，便于理解和学习</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">✓</div>
+                        <h3 class="feature-title">结构合理</h3>
+                        <p class="feature-desc">按照章节组织代码，层次分明</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">✓</div>
+                        <h3 class="feature-title">注释完善</h3>
+                        <p class="feature-desc">关键部分配有详细注释，帮助理解算法原理</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="usage" class="section section-alt">
+            <div class="container">
+                <h2 class="section-title">编译和运行</h2>
+                <div class="code-block">
+                    <div class="code-header">
+                        <span class="code-title">编译方法</span>
+                    </div>
+                    <pre><code># 编译单个文件
+gcc filename.c -o filename
+
+# 编译并运行
+gcc filename.c -o filename && ./filename
+
+# 示例：编译顺序表静态分配代码
+gcc chapter2/seq_list_static.c -o seq_list_static
+./seq_list_static</code></pre>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>基于王道考研《数据结构与算法》笔记编写</p>
+            <p>遵循 CC 4.0 BY-SA 版权协议</p>
+            <p>
+                <a href="https://github.com/Swcmb/wangdao-data-structures-exercises" target="_blank">GitHub 仓库</a>
+                ·
+                <a href="https://blog.csdn.net/weixin_43313333/article/details/129588429" target="_blank">原笔记链接</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
