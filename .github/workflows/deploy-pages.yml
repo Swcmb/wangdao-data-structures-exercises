@@ -6,6 +6,7 @@ on:
       - main
     paths:
       - 'docs/**'
+      - 'chapter**/*.c'
   workflow_dispatch:
 
 permissions:
@@ -18,7 +19,7 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  deploy:
+  build-and-deploy:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -26,6 +27,24 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: |
+          if [ -f package.json ]; then
+            npm ci
+          fi
+
+      - name: Build code data
+        run: |
+          cd docs
+          node build-embed.js
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
