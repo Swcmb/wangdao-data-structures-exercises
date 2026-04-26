@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>示例代码 - 顺序表（静态分配）</title>
+    <style>
+        body {
+            font-family: 'Consolas', monospace;
+            background: #1e1e1e;
+            color: #d4d4d4;
+            margin: 0;
+            padding: 20px;
+        }
+        pre {
+            margin: 0;
+        }
+        .line {
+            line-height: 1.6;
+        }
+        .line-number {
+            color: #858585;
+            margin-right: 20px;
+            user-select: none;
+        }
+        .keyword { color: #569cd6; }
+        .type { color: #4ec9b0; }
+        .string { color: #ce9178; }
+        .comment { color: #6a9955; font-style: italic; }
+        .number { color: #b5cea8; }
+        .function { color: #dcdcaa; }
+        .preprocessor { color: #c586c0; }
+    </style>
+</head>
+<body>
+<pre><code><div class="line"><span class="line-number">  1</span> <span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
+<div class="line"><span class="line-number">  2</span> <span class="preprocessor">#define MaxSize 10</span>  <span class="comment">// 定义最大长度</span></div>
+<div class="line"><span class="line-number">  3</span> </div>
+<div class="line"><span class="line-number">  4</span> <span class="keyword">typedef struct</span> {</div>
+<div class="line"><span class="line-number">  5</span>     <span class="type">int</span> data[MaxSize];  <span class="comment">// 用静态的数组存放数据元素</span></div>
+<div class="line"><span class="line-number">  6</span>     <span class="type">int</span> length;         <span class="comment">// 顺序表的当前长度</span></div>
+<div class="line"><span class="line-number">  7</span> } SqList;                 <span class="comment">// 顺序表的定义</span></div>
+<div class="line"><span class="line-number">  8</span> </div>
+<div class="line"><span class="line-number">  9</span> <span class="type">void</span> <span class="function">InitList</span>(SqList *L) {</div>
+<div class="line"><span class="line-number"> 10</span>     <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; MaxSize; i++) {</div>
+<div class="line"><span class="line-number"> 11</span>         L-&gt;data[i] = <span class="number">0</span>;  <span class="comment">// 初始化为 0</span></div>
+<div class="line"><span class="line-number"> 12</span>     }</div>
+<div class="line"><span class="line-number"> 13</span>     L-&gt;length = <span class="number">0</span>;</div>
+<div class="line"><span class="line-number"> 14</span> }</div>
+<div class="line"><span class="line-number"> 15</span> </div>
+<div class="line"><span class="line-number"> 16</span> <span class="type">int</span> <span class="function">main</span>() {</div>
+<div class="line"><span class="line-number"> 17</span>     SqList L;</div>
+<div class="line"><span class="line-number"> 18</span>     <span class="function">InitList</span>(&amp;L);</div>
+<div class="line"><span class="line-number"> 19</span>     <span class="function">printf</span>(<span class="string">"初始化成功！\n"</span>);</div>
+<div class="line"><span class="line-number"> 20</span>     <span class="keyword">return</span> <span class="number">0</span>;</div>
+<div class="line"><span class="line-number"> 21</span> }</div></code></pre>
+</body>
+</html>
